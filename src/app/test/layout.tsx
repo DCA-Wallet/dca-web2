@@ -1,4 +1,5 @@
-import {cropAddress} from "@components/helpers";
+'use client';
+
 import {Button} from "@mui/material";
 import {useContractRead, useContractWrite} from "wagmi";
 import {dcaWalletContract} from "@components/contracts/dca-wallet";
