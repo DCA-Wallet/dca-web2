@@ -3,7 +3,7 @@ import { zkSync, zkSyncTestnet } from '@wagmi/core/chains'
 import { publicProvider } from 'wagmi/providers/public'
 
 const { publicClient, webSocketPublicClient } = configureChains(
-  [zkSync],
+  [zkSyncTestnet],
   [publicProvider()],
 )
 
