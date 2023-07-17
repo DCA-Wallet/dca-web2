@@ -56,15 +56,15 @@ export default function Home() {
         <main className={styles.main}>
             <Header/>
 
-            <Stack width={'100%'} direction={'row'} justifyContent={'space-between'} spacing={5}>
+            <Stack width={'100%'} direction={'row'} justifyContent={'space-between'} spacing={5} mt={10}>
                 <LeftMenu />
                 <Positions />
             </Stack>
 
-            <Test/>
-            <button onClick={handleExecuteTransactions} disabled={isExecuting}>
-                Execute Transactions
-            </button>
+            {/*<Test/>*/}
+            {/*<button onClick={handleExecuteTransactions} disabled={isExecuting}>*/}
+            {/*    Execute Transactions*/}
+            {/*</button>*/}
         </main>
     )
 }
