@@ -7,9 +7,11 @@ import { useState } from "react";
 import axios from 'axios';
 import * as ethers from "ethers";
 import * as zkSync from "zksync-web3";
+import {LeftMenu} from "@components/app/left-menu/layout";
+import {Positions} from "@components/app/main/layout";
+import {Stack} from "@mui/material";
 
 export default function Home() {
-
     const [isExecuting, setIsExecuting] = useState(false);
 
     const handleExecuteTransactions = async () => {
@@ -53,6 +55,12 @@ export default function Home() {
     return (
         <main className={styles.main}>
             <Header/>
+
+            <Stack width={'100%'} direction={'row'} justifyContent={'space-between'} spacing={5}>
+                <LeftMenu />
+                <Positions />
+            </Stack>
+
             <Test/>
             <button onClick={handleExecuteTransactions} disabled={isExecuting}>
                 Execute Transactions
